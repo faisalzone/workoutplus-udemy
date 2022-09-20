@@ -1,0 +1,21 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}
+  Workout+ free fitness lessons
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="mx-auto text-center">
+  {% for category in categories %}
+    <a href="{% url 'core:category-page' category.slug %}" class="btn btn-secondary btn-primary-spacing">{{ category.name }}</a>
+  {% endfor %}
+</div>
+
+<br><br>
+<h3>Welcome to Workout+</h3>
+The new free personal workout experience for everyone.
+<br><br><br>
+
+{% endblock %}
